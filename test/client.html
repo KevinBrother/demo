@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            padding: 30px;
+            margin: 20px;
+            border: 40px solid deeppink;
+        }
+
+        .outer {
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner" id="my-offset">hahahahahahah</div>
+    </div>
+    <script>
+
+        // clientLeft, clientTop   等于边框的距离
+        // clientHeight， clientWidth 等于content + 2 * padding  
+
+        let ele = document.getElementById('my-offset');
+        const {clientLeft, clientTop, clientHeight, clientWidth} = ele
+
+        console.log('offsetLeft %, clientLeft, clientTop, clientHeight, clientWidth', clientLeft, clientTop, clientHeight, clientWidth)
+
+    </script>
+</body>
+</html>

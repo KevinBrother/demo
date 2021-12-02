@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8e05feec-7db9-48fb-916a-be11baa80a4d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/react-demos/demo02/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react-demos/demo02/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demos/demo04/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react-demos/demo04/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demos/demo05/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react-demos/demo05/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demos/demo08/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/react-demos/demo08/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-demos/demo13/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-demos/demo13/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue3-by-cli/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue3-by-cli/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue3-by-cli/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue3-by-cli/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue3-by-cli/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vue3-by-cli/src/router/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue3-by-cli/src/views/About.vue" beforeDir="false" afterPath="$PROJECT_DIR$/vue3-by-cli/src/views/About.vue" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/mars-front" />
+  </component>
+  <component name="ProjectId" id="21LVaIisMs64v8sc3C3yQFDZtR6" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e05feec-7db9-48fb-916a-be11baa80a4d" name="Default Changelist" comment="" />
+      <created>1637720417727</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1637720417727</updated>
+      <workItem from="1637720419625" duration="6000" />
+      <workItem from="1637720436713" duration="60000" />
+      <workItem from="1637731656400" duration="539000" />
+      <workItem from="1637739946899" duration="34000" />
+      <workItem from="1637895351621" duration="462000" />
+      <workItem from="1637921622908" duration="507000" />
+      <workItem from="1638240650993" duration="227000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/mars-front/src/utils/api.js" />
+        <option value="$PROJECT_DIR$/ts-demo/test.js" />
+        <option value="$PROJECT_DIR$/canvas/demo/canvas.js" />
+        <option value="$PROJECT_DIR$/canvas/util.js" />
+      </list>
+    </option>
+  </component>
+</project>

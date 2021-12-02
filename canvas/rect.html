@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" context="IE=edge">
+    <meta name="viewport" context="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./util.js"></script>
+    <style>
+        
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500px" height="500px"></canvas>
+
+    <script>
+         /** @type {HTMLCanvasElement} */
+        //  1. 获取画布
+        let canvas = document.getElementById('canvas');
+        // 2. 获取画布的上下文
+        const context = canvas.getContext('2d');
+        drawLine({context, moveTo: [400, 400], lineTo: [100, 400], strokeStyle: 'blue' })
+        drawLine({context, moveTo: [100, 400], lineTo: [100, 100], strokeStyle: 'green' })
+        // context.fillRect(100, 200, 100, 200);
+        // context.fillRect(250, 150, 100, 250);
+
+        for (let i = 0; i < 2; i++) {
+            let height = Math.random() * 300;
+            let x = 100 + i * 150;
+            let y = 300 - height + 100;
+            console.log(height, y);
+
+            context.fillStyle = '#' + parseInt(Math.random() * 0xffffff).toString(16)
+            context.fillRect(x, y, 100, height);
+            
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+<template>
+    ;lajdksasda;sldj
+</template>

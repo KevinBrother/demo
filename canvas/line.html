@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" context="IE=edge">
+    <meta name="viewport" context="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+
+        canvas {
+            display: block;
+            margin: 0 auto;
+
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="500px" height="500px"></canvas>
+
+    <script>
+         /** @type {HTMLCanvasElement} */
+        //  1. 获取画布
+        let canvas = document.getElementById('canvas');
+        // 2. 获取画布的上下文
+        const context = canvas.getContext('2d');
+        // 3. 开始一条路径
+        context.beginPath();
+        // 4. 确定起始点
+        context.moveTo(100, 100);
+        // 5. 确定结束点
+        context.lineTo(400, 400);
+
+       /*              
+            着色之前设置颜色和线框 
+        
+        */
+        context.strokeStyle = 'green';
+        context.lineWidth = 4;
+
+        // 6. 着色
+        context.stroke();
+        // 7. 结束路径
+        context.closePath();
+
+
+    </script>
+</body>
+</html>

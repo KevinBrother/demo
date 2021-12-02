@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        function errorHandler() {
+            try {
+                let map = {name: 11, age: 12}
+                return new Error(map)            
+                console.log(b);
+                console.log('try中的后面会走吗？');
+            }catch(e) {
+                console.log('vule',e);
+            }
+            console.log('try外的呢？');
+        }
+
+        console.log(errorHandler());
+    </script>
+</body>
+</html>

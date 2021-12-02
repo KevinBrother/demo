@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../util.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="500px" height="500px"></canvas>
+
+    <script>
+          /** @type {HTMLCanvasElement} */
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        drawLine({context, moveTo: [100, 100], lineTo: [400, 100], strokeStyle: 'red' })
+        drawLine({context, moveTo: [400, 100], lineTo: [400, 400], strokeStyle: 'yellow' })
+        drawLine({context, moveTo: [400, 400], lineTo: [100, 400], strokeStyle: 'blue' })
+        drawLine({context, moveTo: [100, 400], lineTo: [100, 100], strokeStyle: 'green' })
+
+    </script>
+</body>
+</html>

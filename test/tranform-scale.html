@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div { 
+            border: 1px solid black;
+        }
+        .wrapper {
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            margin: 0 auto;
+            height: 500px;
+            width: 500px;
+        }
+        
+        .outer { 
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            width: 150px;
+            height: 150px
+        }
+
+        .inner { 
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="outer" style='color: red;'>
+            o
+            <div class="inner">
+                i
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <button id='outer'>outer</button>
+    </div>
+
+    <script>
+        let outer = document.querySelector('.outer');
+        let size = 1;
+        document.getElementById('outer').addEventListener('click', () => {
+            console.log(outer.style.width, outer.style.height);
+            console.log(outer.width, outer.height);
+            // outer.style.transform = 'origin(1, 1)';
+            size = size + 0.1;
+            outer.style.transform = `scale(${size})`;
+
+            outer.getAttribute('')
+
+            console.log(outer.style.transform);
+        })
+
+        let imgUrl = 'https://t7.baidu.com/it/u=1819248061,230866778&fm=193&f=GIF'
+
+        let img = new Image();
+        img.src = imgUrl;
+        img.onload = () => {
+            console.log(img.width, img.height);
+        }
+
+
+        // event loop
+
+
+
+        // o-t -> 1;  s-t-> 2
+
+        // o-t -> 2; s-t-> 3;
+
+    </script>
+</body>
+</html>

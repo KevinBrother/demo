@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            padding: 30px;
+            margin: 20px;
+            border: 20px solid deeppink;
+        }
+
+        .outer {
+            position: absolute;
+            top: 300px;
+            left: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner" id="my-offset">hahahahahahah</div>
+    </div>
+    <script>
+
+        // offsetLeft和offsetRight 当前元素外边框到父盒子的内边框的距离（如果没定义父盒子，则默认为html）
+        // offsetHeight和offsetWidt  当前元素的外边框之间的距离  context + 2 * padding + 2 * border
+        let offsetEle = document.getElementById('my-offset');
+        const {offsetLeft, offsetTop, offsetHeight, offsetWidth} = offsetEle
+
+        console.log('offsetLeft %, offsetLeft, offsetTop, offsetHeight, offsetWidth', offsetLeft, offsetTop, offsetHeight, offsetWidth)
+
+    </script>
+</body>
+</html>
