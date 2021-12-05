@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 <body>
+    <iframe src="https://www.baidu.com/" frameborder="0"></iframe>
+
     <script>
 
-        console.log(location.href);
-        //
-        const worker = new Worker(location.href + 'worker.js');
-        
+        console.log(location.origin)
+        const worker = new Worker(location.origin + '/worker-03.js');
+
         worker.addEventListener('error', (error) => console.log(error));
         worker.addEventListener('message', (message) => console.log('接到worker发来的消息： ',message));
         worker.addEventListener('messageerror', (messageerror) => console.log(messageerror));
 
-        worker.postMessage('来自主线程的消息');
 
     </script>
 </body>
