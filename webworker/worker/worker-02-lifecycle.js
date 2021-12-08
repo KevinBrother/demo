@@ -1,6 +1,5 @@
-// 在工作者线程内部，使用importScripts()可以加载其他源的脚本。
 
-self.name = '2 号打工人-222';
+self.name = '2 号打工人';
 self.postMessage('first msg');
 // self.close();
 self.postMessage('second msg');

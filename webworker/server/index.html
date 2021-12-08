@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="manifest" href="./manifest.json" />
+  </head>
+  <body>
+    https://juejin.cn/post/6844903584899792903
+    <div style="background-color: blueviolet">
+      <img src="./images/all.png" alt="" />
+      <img src="./images/logo.png" alt="" />
+    </div>
+
+    <button id="installBtn">安装</button>
+
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker.register("/sw.js").then(
+            function (registration) {
+              // Registration was successful
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+            },
+            function (err) {
+              // registration failed :(
+              console.log("ServiceWorker registration failed: ", err);
+            }
+          );
+        });
+      }
+    </script>
+  </body>
+</html>
