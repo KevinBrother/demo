@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "packages/*",
+    "outer-one/*",
+    "outer-two/*",
+    "outer-one/inner-one/*"
+  ],
+  "version": "0.0.0"
+}
