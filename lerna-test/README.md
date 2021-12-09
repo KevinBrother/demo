@@ -15,6 +15,9 @@
 ## 安装到某个包里
     lerna add lodash --scope=moduleA
 
+    可以吧moduleA 连接到moduleB中
+    lerna add moduleA --scope=moduleA
+
 ## 给 moduleA 移除一个依赖 lodash
     lerna exec --scope=moduleA  npm uninstall lodash
 
