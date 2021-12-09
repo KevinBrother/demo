@@ -1,0 +1,14 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "npmClient": "yarn",
+  "useWorkspaces": true, 
+  "private": true,
+  "workspaces": ["packages/*"],
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "author": "",
+  "license": "ISC"
+}
