@@ -1,11 +1,12 @@
 {
   "name": "pwa_test",
   "short_name": "测试",
-  "start_url": "http://localhost:5501/webworker/server/index.html",
+  "start_url": "http://localhost:8000/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#05192D",
   "mode": "fullscreen",
+  "id": "dataIsTest",
   "scope": "/",
   "description": "pwa的manifest文件",
   "icons": [
