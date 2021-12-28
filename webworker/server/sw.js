@@ -2,8 +2,9 @@ const cacheData = [
   '/',
   '/index.html',
   '/404.html',
-  '/images/all.png',
-  '/images/logo.png',
+  '/images/bountyHunters.jpg',
+  '/images/star-wars-logo.jpg',
+  '/images/snowTroopers.jpg',
   '/sw.js'
 ];
 

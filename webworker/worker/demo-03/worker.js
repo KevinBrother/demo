@@ -1,8 +1,8 @@
 
 console.log('start importScripts');
 // 引入的脚本会共享作用域
-importScripts('./worker-01.js');
-importScripts('./worker-02-lifecycle.js');
+importScripts('./worker-lifecycle.js');
+importScripts('./worker.js');
 
 console.log('end importScripts');
 
