@@ -10,8 +10,8 @@ self.onconnect = function (w) {
     port.start();
     // 监听
     port.onmessage = function (e) {
-        console.log('e. data ---', e.data, connectList);
-        console.log('e. connectList ---', connectList);
+        // console.log('e. data ---', e.data, connectList);
+        // console.log('e. connectList ---', connectList);
 
         const worker = e.currentTarget, data = e.data;
         
@@ -24,7 +24,7 @@ self.onconnect = function (w) {
         if (data.type === "start") {
             connectList.forEach(item => {
                 if (item === worker) {
-                    console.log('???', e.data);
+                    // console.log('???', e.data);
                     item.postMessage("你已进入");
                 }
                 else {

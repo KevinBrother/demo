@@ -4,12 +4,9 @@
     <p id="news"></p>
 </body>
 <script>
-    const work = new SharedWorker('work.js');
-    const work2 = new SharedWorker('work.js');
+    const work = new SharedWorker('./worker.js');
     const port = work.port;
 
-    console.log('is===', work === work2);
-    
     //开启
     port.start();
 
