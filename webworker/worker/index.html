@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p> hello world </p>
+
+    <script src="./util.js"></script>
+    <script>
+        const min = 2;
+        const max = 5e6;
+
+        console.time('Main');
+
+        /*        
+        console.time('generatePrimes 1')
+        generatePrimes(min, max);
+        console.timeEnd('generatePrimes 1')
+        
+        console.time('generatePrimes 2')
+        generatePrimes(min, max);
+        console.timeEnd('generatePrimes 2')
+        
+        console.time('generatePrimes 3')
+        generatePrimes(min, max);
+        console.timeEnd('generatePrimes 3') 
+        */
+
+        /*
+        const worker1 = new Worker('./worker.js');
+        const worker2 = new Worker('./worker.js');
+        const worker3 = new Worker('./worker.js');
+
+        worker1.postMessage({min, max, key: 'worker1'});
+        worker2.postMessage({min, max, key: 'worker2'});
+        worker3.postMessage({min, max, key: 'worker3'});
+  
+        worker1.addEventListener('message', (message) => console.log('接到worker1发来的消息： ',message));
+        worker2.addEventListener('message', (message) => console.log('接到worker2发来的消息： ',message));
+        worker3.addEventListener('message', (message) => console.log('接到worker3发来的消息： ',message));
+         */
+        
+        console.timeEnd('Main');
+    </script>
+</body>
+</html>
