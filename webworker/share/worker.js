@@ -1,44 +1,28 @@
-const connectList = [], msgList = [];
-
-console.log(self);
-self.onconnect = function (w) {
-    // 开启
-    console.log(w.ports[0]);
-
-    const port = w.ports[0];
-    
+let list = [];
+let list_id = [];
+onconnect = function(e) {
+    let port = e.ports[0];
+    port.addEventListener('message', function(e) {
+        if(e.data.id){
+            let index = list_id.indexOf(e.data.id);
+            if(index === -1){
+                list.push(port);
+                list_id.push(e.data.id);
+            }else{
+                //关闭上个链接
+                list[index].close();
+                list[index] = port;
+            };
+        }else{
+            send(e.data[1],e.data[0]);
+        };
+    });
     port.start();
-    // 监听
-    port.onmessage = function (e) {
-        // console.log('e. data ---', e.data, connectList);
-        // console.log('e. connectList ---', connectList);
-
-        const worker = e.currentTarget, data = e.data;
-        
-        // 加入到列表
-        if (connectList.indexOf(worker) === -1) {
-            connectList.push(worker);
-        }
-
-        // 新用户进入
-        if (data.type === "start") {
-            connectList.forEach(item => {
-                if (item === worker) {
-                    // console.log('???', e.data);
-                    item.postMessage("你已进入");
-                }
-                else {
-                    item.postMessage("新用户进入");
-                }
-            });
-        }
-
-        //新消息
-        if (data.type === "msg") {
-            msgList.push(data.value);
-            connectList.forEach(item => {
-                item.postMessage(msgList);
-            });
-        }
+}
+let send = function(data,id){
+    let index = list_id.indexOf(id);
+    if(index !== -1){
+        list[index].postMessage([id,data]);
     };
+    
 };

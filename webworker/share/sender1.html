@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>多个页面之间的通信</title>
+</head>
+<body>
+  <h1>sender1</h1>
+  <div>
+    <input type="text" class="input1">
+    <button class="btn5">发送</button>
+  </div>
+  <div class="chat"></div>
+<script>
+let worker = new SharedWorker("worker.js");
+worker.port.start();
+const ID = 'sender1';
+
+worker.port.postMessage({id:ID});
+
+let sendMessage = function(data){
+    worker.port.postMessage(['sender1',data]);
+};
+
+//接收worker的发送消息
+worker.port.onmessage = function(e){
+  handleMessage(e.data[0],e.data[1]);
+};
+
+let chatEle = document.querySelector(".chat");
+let inputEle = document.querySelector(".input1");
+document.querySelector(".btn5").onclick = function(){
+  let value = inputEle.value;
+  if(value){
+    handleMessage('sender1',value);
+    sendMessage(value);
+    //inputEle.value = "";
+  };
+};
+let handleMessage = function(id,data){
+  let divEle = document.createElement("div");
+  if(id === 'sender2'){
+    divEle.style.color = "red";
+  }else{
+    divEle.style.color = "green";
+  };
+  divEle.innerHTML = id+"说： "+data;
+  chatEle.appendChild(divEle);
+};
+</script>
+</body>
+</html>
