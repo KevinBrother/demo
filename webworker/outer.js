@@ -1,1 +1,0 @@
-console.log('来自outer的js文件',self);
