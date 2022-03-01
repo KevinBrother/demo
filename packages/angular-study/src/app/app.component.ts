@@ -8,4 +8,12 @@ import { Component, VERSION } from '@angular/core';
 export class AppComponent {
   name = 'Angular ' + VERSION.major;
   title = 'Tour of Heroes';
+
+
+
+  getValueFromSon(value: any) {
+    console.log('getValueFromSon', value);
+  }
 }
+
+

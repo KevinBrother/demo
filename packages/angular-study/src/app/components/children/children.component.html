@@ -1,0 +1,24 @@
+<p>children works! {{ item }}</p>
+
+<input type="text" #good />
+
+<hr />
+<!-- 模板变量 start -->
+<div *ngIf="true">huhu {{ good.value }}</div>
+
+<button #buttonDOM>1212</button>
+{{ buttonDOM }}
+
+<input #phone placeholder="phone number" />
+{{ phone.value }}
+
+<ng-template #ref3></ng-template>
+<!-- lots of other elements -->
+
+<!-- phone refers to the input element; pass its `value` to an event handler -->
+<button (click)="callPhone(ref3)">khgk{{ ref3 }}</button>
+
+<!-- 模板变量 end  -->
+<hr />
+
+<button (click)="addNewItem(1212)">子传递</button>
