@@ -1,0 +1,21 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "child_process.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node --loader ts-node/esm test-lib.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "ts-node": "^10.4.0",
+    "winston": "^3.4.0"
+  }
+}
