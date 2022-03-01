@@ -1,1 +1,28 @@
 <p>form-module works!</p>
+
+<h1>模板驱动</h1>
+<form #form="ngForm" (submit)="onsubmit(form)">
+  <div ngModelGroup="user">
+    <input type="text" name="username" ngModel required />
+  </div>
+  <div ngModelGroup="contexts">
+    <input type="text" name="phone" ngModel pattern="\d" />
+  </div>
+
+  <div ngModelGroup="others">
+    <input name="other" #other ngModel required />
+    <div *ngIf="other.required && !other.value">请填写用户名</div>
+    <div *ngIf="other.pattern">不符合正则规则</div>
+  </div>
+
+  <button [disabled]="form.invalid">提交</button>
+  <button [disabled]="form.invalid">dd</button>
+</form>
+<hr />
+<h1>数据驱动</h1>
+
+<form [formGroup]="contactForm" (submit)="onSubmitControl()">
+  <input type="text" formControlName="name" />
+  <input type="text" formControlName="phone" />
+  <button>control form</button>
+</form>
