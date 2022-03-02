@@ -2,15 +2,31 @@
 <button nz-button [nzType]="'primary'" (click)="showModal()">
   <span>Show Modal</span>
 </button>
+
+{{ robotList }}
 <nz-modal
   [(nzVisible)]="isVisible"
   nzTitle="The first Modal"
   (nzOnCancel)="handleCancel()"
   (nzOnOk)="handleOk()"
 >
-  <ng-container *nzModalContent>
-    <p>Content one</p>
-    <p>Content two</p>
-    <p>Content three</p>
-  </ng-container>
+  <div class="robot-group-robotList border">
+    <section class="robotList border">
+      <div class="robot-group-list">
+        adad
+      </div>
+    </section>
+    <section class="selected-robot border">
+      <div class="header">header</div>
+      <button nzTooltipTitle="prompt text" nz-tooltip>adafdsfasdfa</button>
+      <div class="wrapper">
+        <nz-list nzBordered nzSize="small">
+          <nz-list-item *ngFor="let item of robotList">
+            {{ item.robotName }}
+            <span nzTooltipTitle="prompt text" nz-tooltip>删除</span>
+          </nz-list-item>
+        </nz-list>
+      </div>
+    </section>
+  </div>
 </nz-modal>
