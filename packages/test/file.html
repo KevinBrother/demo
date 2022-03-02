@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="file"
+      name=""
+      multiple="multiple"
+      onchange="getFile(this)"
+      id=""
+    />
+
+    <button onclick="send()">send</button>
+    <button onclick="sendList()">send222</button>
+    <script>
+      var formData = new FormData();
+      var getFile = function(ele) {
+        console.log(ele.files);
+        formData.append('file', ele.files);
+        // formData.append('file', ele.files[0]);
+        console.log('[ formData ] >', formData);
+        console.log('[ formData ] >', formData.get('file'));
+
+        fetch('http://www.baidu.com', {
+          method: 'POST',
+          body: formData
+        });
+      };
+    </script>
+
+    <script>
+      var send = function() {
+        var fd = new FormData();
+        var files = [];
+        var file1 = new File(['foo'], 'foo.txt', {
+          type: 'text/plain'
+        });
+        var file2 = new File(['bar'], 'bar.txt', {
+          type: 'text/plain'
+        });
+
+        files.push(file1, file2);
+        fd.append('files[]', new Blob(['a']), 'a.txt');
+        fd.append('files[]', new Blob(['b']), 'b.txt');
+        // fd.append('files', files);
+        // console.log('[ fd ] >', fd);
+        // console.log('[ fd ] >', fd.get('file'));
+
+        fetch('http://www.baidu.com', {
+          method: 'POST',
+          body: fd
+        });
+      };
+    </script>
+
+    <script>
+      function getFileList() {
+        const input = document.createElement('input');
+
+        const form = document.createElement('form');
+
+        var file1 = new File(['a'], 'a.txt');
+        var file2 = new File(['b'], 'b.txt');
+
+        input.type = 'file';
+
+        input.name = 'files';
+
+        input.multiple = true;
+
+        const files = Array.from(input.files);
+        files.push(file1);
+        files.push(file2);
+        console.log('构建都。。。。', files);
+
+        const fd = new FormData();
+        fd.append('files', files);
+
+        fetch('http://www.baidu.com', {
+          method: 'POST',
+          body: fd
+        });
+      }
+
+      getFileList();
+    </script>
+    <script>
+      var sendList = function() {
+        const input = document.createElement('input');
+
+        const form = document.createElement('form');
+
+        const [...data] = [new File(['a'], 'a.txt'), new File(['b'], 'b.txt')];
+
+        input.type = 'file';
+
+        input.name = 'files';
+
+        input.multiple = true;
+
+        // set `File` objects at `FileList`
+
+        input.files[Symbol.iterator] = function*() {
+          for (const file of data) {
+            yield file;
+          }
+        };
+
+        form.appendChild(input);
+
+        const fd2 = new FormData(form);
+
+        for (const file of input.files) {
+          // console.log(file); // `File` objects set at `data`
+        }
+
+        for (const [key, prop] of fd2) {
+          // `"files"`, single `File` object having `lastModified` property
+          // set to a time greater than last `File` object within `data`
+          // at Chromium 61, only `"files"` at Firefox 57
+          // console.log(key, prop);
+        }
+
+        console.log(input.files);
+        fetch('http://www.baidu.com', {
+          method: 'POST',
+          body: fd2
+        });
+      };
+    </script>
+  </body>
+</html>
