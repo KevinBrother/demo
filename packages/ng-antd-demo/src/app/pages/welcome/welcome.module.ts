@@ -9,8 +9,9 @@ import { NzIconModule } from 'ng-zorro-antd/icon'
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
-import { CommonModule } from '@angular/common'
-
+import { CommonModule } from '@angular/common';
+import { AntdTableComponent } from './components/antd-table/antd-table.component'
+import { NzTableModule } from 'ng-zorro-antd/table';
 @NgModule({
   imports: [
     WelcomeRoutingModule,
@@ -18,10 +19,11 @@ import { CommonModule } from '@angular/common'
     NzIconModule,
     NzListModule,
     NzButtonModule,
+    NzTableModule,
     CommonModule,
     NzToolTipModule
   ],
-  declarations: [WelcomeComponent, AntdModalComponent],
+  declarations: [WelcomeComponent, AntdModalComponent, AntdTableComponent],
   exports: [WelcomeComponent]
 })
 export class WelcomeModule { }
